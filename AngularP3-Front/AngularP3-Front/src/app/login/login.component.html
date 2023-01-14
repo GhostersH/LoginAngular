@@ -1,0 +1,22 @@
+<div class="login">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+        <div>
+            <input type="email" placeholder="Email" formControlName="mail">      
+        </div>
+
+        <div>
+            <input type="password" placeholder="Password" formControlName="password">
+        </div>
+
+        <div>
+            <button type="submit">Iniciar sesion</button>
+        </div>
+
+    </form>
+
+    <div class="alert" *ngIf="errorStatus">
+        <p>{{errorMsj}}</p>
+    </div>
+
+</div>
